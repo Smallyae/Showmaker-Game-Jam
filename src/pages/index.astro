@@ -7,8 +7,10 @@ import Texto from "../components/Texto.astro";
 <Layout title="Welcome to Astro.">
   <Header />
   <main>
-    <h1>Showmaker</h1>
-    <h2>Game Jam</h2>
+    <section class="titulo">
+      <h1>Showmaker</h1>
+      <h2>Game Jam</h2>
+    </section>
     <Texto
       titulo="Introducción"
       parrafo="Show Maker Jam 2024 es una Jam organizada por Jair Ochoa (Small Yae) para realizarse a lo largo de la primera mitad del año 2024."
@@ -17,7 +19,33 @@ import Texto from "../components/Texto.astro";
 </Layout>
 
 <style>
+  .titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   h1 {
-    font-size: 250px;
+    margin: 0px;
+    font-size: 13vw;
+    font-style: normal;
+    font-weight: 700;
+    background: linear-gradient(268deg, #69cdc5 -1.7%, #41929f 100.86%);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: Gradient 10s ease infinite;
+  }
+
+  @keyframes Gradient {
+    0% {
+      background-position: 100% 0%;
+    }
+    50% {
+      background-position: 0% 100%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
   }
 </style>
