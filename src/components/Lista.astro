@@ -1,17 +1,19 @@
 ---
 interface Props {
   titulo: string;
-  parrafos: string[];
+  elementos: string[];
 }
 
-const { titulo, parrafos } = Astro.props;
+const { titulo, elementos } = Astro.props;
 ---
 
 <section>
   <h3>
     {titulo}
   </h3>
-  {parrafos.map((parrafo) => <p>{parrafo}</p>)}
+  <ul>
+    {elementos.map((elemento) => <li>{elemento}</li>)}
+  </ul>
 </section>
 
 <style>
@@ -19,7 +21,7 @@ const { titulo, parrafos } = Astro.props;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 2.5vw;
+    gap: 3.5vw;
   }
   h3 {
     font-size: calc(1em + 2vw);
@@ -27,8 +29,16 @@ const { titulo, parrafos } = Astro.props;
     font-weight: 700;
     margin: 0px;
   }
-  p {
-    font-size: calc(8px + 1.35vw);
+  ul {
+    margin: 0px;
+    padding: 0px;
+    padding-left: 1vw;
+    gap: 3.5vw;
+    display: flex;
+    flex-direction: column;
+  }
+  li {
+    font-size: calc(8px + 1.5vw);
     font-style: normal;
     font-weight: 300;
     align-self: stretch;

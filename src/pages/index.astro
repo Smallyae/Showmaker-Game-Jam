@@ -2,6 +2,9 @@
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import Texto from "../components/Texto.astro";
+import Lista from "../components/Lista.astro";
+import Fotter from "../components/Fotter.astro";
+import Tema from "../components/Tema.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -13,8 +16,44 @@ import Texto from "../components/Texto.astro";
     </section>
     <Texto
       titulo="Introducción"
-      parrafo="Show Maker Jam 2024 es una Jam organizada por Jair Ochoa (Small Yae) para realizarse a lo largo de la primera mitad del año 2024."
+      parrafos={[
+        "Show Maker Jam 2024 es una Jam organizada por Jair Ochoa (Small Yae) para realizarse a lo largo de la primera mitad del año 2024.",
+      ]}
     />
+    <Tema tema="Silencio" />
+    <Texto
+      titulo="Desarrollo"
+      parrafos={[
+        "La jam tendrá una duración de x semanas (x - x) para que dé tiempo a participar con cierta tranquilidad.",
+        "Los juegos se deben entregar mediante una página de itcht.io.",
+      ]}
+    />
+    <Lista
+      titulo="Criterios de Voto"
+      elementos={[
+        "Calidad: ¿Es el juego bueno? ¿Es una buena experiencia? ¿Merece la pena jugarlo?",
+        "Jugabilidad: ¿Se controla de forma agradable y fluida? ¿Tiene buenas mecánicas y/o diseño de niveles?",
+        "Audiovisuales: ¿Destacan sus gráficos, música, sonido o la presentación en general?",
+        "Innovación: ¿Es un juego original? ¿Aplica el tema de forma novedosa? ¿Tiene algo que te haya sorprendido?",
+      ]}
+    />
+    <Lista
+      titulo="Reglas"
+      elementos={[
+        "El juego debe haber sido desarrollado y presentado durante el plazo de la jam.",
+        "El juego debe cumplir el tema de la jam.",
+        "El juego debe de ser jugable en Windows sin necesidad de emuladores.",
+        "El juego debe ser totalmente gratuito.",
+        "El juego no debe requerir hardware especial (ej: gafas de realidad virtual).",
+        "El juego no debe requerir la instalación de algún programa externo o el registro en otra plataforma (ej: Core, Roblox).",
+        "Puedes usar las herramientas que tú quieras para desarrollarlo, incluyendo cualquier motor.",
+        "No es obligatorio, pero se recomienda altamente incluir una versión descargable y que no requiere instalación.",
+        "Puedes usar assets creados fuera de la jam siempre que sean gratuitos o tengas los derechos para usarlos.",
+        "Al participar en la jam estás dando tu consentimiento explícito para que tu juego sea juzgado.",
+        "Se valorará muy positivamente que el tema de la jam esté claramente presente y sea usado para crear mecánicas o experiencias novedosas.",
+      ]}
+    />
+    <Fotter />
   </main>
 </Layout>
 
@@ -47,5 +86,16 @@ import Texto from "../components/Texto.astro";
     100% {
       background-position: 100% 0%;
     }
+  }
+  h2 {
+    font-size: 5vw;
+    margin: 0px;
+    font-style: normal;
+  }
+  main {
+    padding: 0px 2%;
+    gap: 6.5vw;
+    display: flex;
+    flex-direction: column;
   }
 </style>

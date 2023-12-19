@@ -1,23 +1,29 @@
 ---
 interface Props {
-    texto: string;
+  texto: string;
 }
 
 const { texto } = Astro.props;
 ---
 
 <button>
-    {texto}
+  {texto}
 </button>
 
 <style>
+  button {
+    display: flex;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #f8f8f8;
+    border-radius: 8px;
+    border: 1px solid #222;
+  }
+  @media (max-width: 600px) {
     button {
-        display: flex;
-        padding: 16px;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        border-radius: 8px;
-        border: 1px solid #222;
+      display: none;
     }
+  }
 </style>

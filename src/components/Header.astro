@@ -1,54 +1,57 @@
 ---
 import BotonJuegos from "./BotonJuegos.astro";
 import BotonParticipantes from "./BotonParticipantes.astro";
-console.log('header.js');
+import BotonHamburguesa from "./BotonHamburguesa.astro";
+console.log("header.js");
 ---
 
 <header>
-    <img src="public/Sm.svg" alt="Icon">
-    <form action="/search" method="get" class="search-form">
-        <img src="/public/Lupa.svg" alt="">
-        <input type="text" name="q" placeholder="Buscar" id="search-input">
-    </form>
-    <BotonJuegos texto="Juegos"/>
-    <BotonParticipantes texto="Participantes"/>
+  <img src="public/Sm.svg" alt="Icon" />
+  <form action="/search" method="get" class="search-form">
+    <img src="/public/Lupa.svg" alt="" />
+    <input type="text" name="q" placeholder="Buscar" id="search-input" />
+  </form>
+  <BotonJuegos texto="Juegos" />
+  <BotonParticipantes texto="Participantes" />
+  <BotonHamburguesa />
 </header>
 
 <script>
-    function darkenBackground() {
-        document.body.classList.add('dark-background');
-    }
-    
-    function lightenBackground() {
-        document.body.classList.remove('dark-background');
-    }
-    </script>
+  function darkenBackground() {
+    document.body.classList.add("dark-background");
+  }
+
+  function lightenBackground() {
+    document.body.classList.remove("dark-background");
+  }
+</script>
 
 <style>
-    header{
-        display: flex;
-        align-items: center;
-        gap: 16px;
-    }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
 
-    form{
-        display: flex;
-        padding: 16px;
-        justify-content: space-between;
-        align-items: center;
-        flex: 1 0 0;
-        border-radius: 8px;
-        background: #D2D2D2;
-        gap: 12px;
-        transition: background .3s ease;
-    }
-    #search-input{
-        border: none;
-        background: transparent;
-        outline: none;
-        flex: 1 0 0;
-    }
-    .search-form:focus-within{
-        background: #323232;
-    }
+  form {
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1 0 0;
+    border-radius: 8px;
+    background: #d2d2d2;
+    gap: 12px;
+    transition: background 0.3s ease;
+  }
+  #search-input {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1 0 0;
+    width: 100%;
+  }
+  .search-form:focus-within {
+    background: #323232;
+  }
 </style>
