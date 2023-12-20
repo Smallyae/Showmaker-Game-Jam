@@ -4,6 +4,9 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Fotter.astro";
 import { ViewTransitions } from "astro:transitions";
 ---
 
@@ -19,7 +22,12 @@ import { ViewTransitions } from "astro:transitions";
     <ViewTransitions />
   </head>
   <body>
-    <slot />
+    <Header />
+    <h1>Participantes</h1>
+    <section>
+      <slot />
+    </section>
+    <Footer />
   </body><style is:global>
     :root {
       --accent: 136, 58, 234;
@@ -40,6 +48,13 @@ import { ViewTransitions } from "astro:transitions";
       justify-content: center;
       color: #222;
     }
+    section {
+      display: flex;
+      align-items: flex-start;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
     body {
       margin: 0;
       width: 90%;
@@ -59,6 +74,12 @@ import { ViewTransitions } from "astro:transitions";
         Bitstream Vera Sans Mono,
         Courier New,
         monospace;
+    }
+    h1 {
+      color: #222;
+      font-weight: 700;
+      font-size: calc(1.5rem + 1.5vw);
+      margin: 0px;
     }
   </style>
 </html>

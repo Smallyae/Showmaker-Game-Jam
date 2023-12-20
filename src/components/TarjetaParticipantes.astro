@@ -1,0 +1,62 @@
+---
+interface Props {
+  nombre: string;
+}
+
+const { nombre } = Astro.props;
+---
+
+<main>
+  <img src="/Participante.png" alt="Foto del participante" />
+  <section class="Perfil">
+    <div class="imagen">
+      <img src="/ProfileImg.png" alt="" />
+    </div>
+    <div class="nombre">
+      <h1>{nombre}</h1>
+    </div>
+  </section>
+</main>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px;
+    background: #fff;
+    width: calc(290px + 1.3vw);
+  }
+  img {
+    border-radius: 8px;
+    width: 100%;
+    height: auto;
+  }
+  .Perfil {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: calc(12px + 1.3vw) calc(12px + 1.3vw);
+    align-items: center;
+    gap: 10%;
+    align-self: stretch;
+  }
+  .Perfil img {
+    border-radius: 100%;
+    height: auto;
+    width: 100%;
+  }
+  h1 {
+    font-size: min(calc(12px + 1.3vw), 39px);
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+  }
+  .imagen {
+    width: 25%;
+    height: auto;
+  }
+  .nombre {
+    width: 65%;
+    height: auto;
+  }
+</style>

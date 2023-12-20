@@ -1,0 +1,31 @@
+---
+import Layout from "../layouts/Tarjetas.astro";
+import TarjetaParticipante from "../components/TarjetaParticipantes.astro";
+const participantes = [
+  "Juan",
+  "Danna",
+  "Aleja",
+  "Valentinaaaaaa",
+  "Sebastian",
+  "Juanita",
+  "lala",
+  "jair",
+];
+---
+
+<Layout title="Participantes">
+  <div class="contenedor-tarjetas">
+    {participantes.map((nombre) => <TarjetaParticipante nombre={nombre} />)}
+  </div>
+</Layout>
+
+<style>
+  .contenedor-tarjetas {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, 305px);
+    gap: 20px;
+    justify-content: center; /* Esto centra los elementos horizontalmente */
+    justify-items: start; /* Esto alinea los elementos a la derecha */
+  }
+</style>

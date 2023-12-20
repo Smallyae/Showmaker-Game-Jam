@@ -6,9 +6,11 @@ console.log("header.js");
 ---
 
 <header>
-  <img src="./Sm.svg" alt="Icon" />
+  <a href="/">
+    <img src="/Sm.svg" alt="Icon" />
+  </a>
   <form action="/search" method="get" class="search-form">
-    <img src="./Lupa.svg" alt="" />
+    <img src="/Lupa.svg" alt="" />
     <input type="text" name="q" placeholder="Buscar" id="search-input" />
   </form>
   <BotonJuegos texto="Juegos" />
@@ -31,6 +33,7 @@ console.log("header.js");
     display: flex;
     align-items: center;
     gap: 16px;
+    width: 100%;
   }
 
   form {
