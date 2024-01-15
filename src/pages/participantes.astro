@@ -2,24 +2,58 @@
 import Layout from "../layouts/Tarjetas.astro";
 import TarjetaParticipante from "../components/TarjetaParticipantes.astro";
 const participantes = [
-  "Juan",
-  "Danna",
-  "Aleja",
-  "Valentinaaaaaa",
-  "Sebastian",
-  "Juanita",
-  "lala",
-  "jair",
+  {
+    nombre: "Juan",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Danna",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Aleja",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Valentina",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Zugi",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Juanita",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
 ];
 ---
 
 <Layout title="Participantes">
+  <h1>Participantes</h1>
   <div class="contenedor-tarjetas">
-    {participantes.map((nombre) => <TarjetaParticipante nombre={nombre} />)}
+    {
+      participantes.map((participante) => (
+        <TarjetaParticipante
+          nombre={participante.nombre}
+          imagen={participante.imagen}
+          portada={participante.portada}
+        />
+      ))
+    }
   </div>
 </Layout>
 
 <style>
+  h1 {
+    padding: 0 0 6.5vw 0;
+  }
   .contenedor-tarjetas {
     display: grid;
     width: 100%;

@@ -20,45 +20,46 @@ import { ViewTransitions } from "astro:transitions";
   </head>
   <body>
     <slot />
-  </body><style is:global>
-    :root {
-      --accent: 136, 58, 234;
-      --accent-light: 224, 204, 250;
-      --accent-dark: 49, 10, 101;
-      --accent-gradient: linear-gradient(
-        45deg,
-        rgb(var(--accent)),
-        rgb(var(--accent-light)) 30%,
-        white 60%
-      );
-    }
-    html {
-      font-family: sans-serif, system-ui;
-      background: #f8f8f8;
-      background-size: 224px;
-      display: flex;
-      justify-content: center;
-      color: #222;
-    }
-    body {
-      margin: 0;
-      width: 90%;
-      padding-top: 16px;
-      gap: 6.5vw;
-      display: flex;
-      flex-direction: column;
-    }
-    code {
-      font-family:
-        HK Grotesk,
-        Menlo,
-        Monaco,
-        Lucida Console,
-        Liberation Mono,
-        DejaVu Sans Mono,
-        Bitstream Vera Sans Mono,
-        Courier New,
-        monospace;
-    }
-  </style>
+    <style is:global>
+      :root {
+        --accent: 136, 58, 234;
+        --accent-light: 224, 204, 250;
+        --accent-dark: 49, 10, 101;
+        --accent-gradient: linear-gradient(
+          45deg,
+          rgb(var(--accent)),
+          rgb(var(--accent-light)) 30%,
+          white 60%
+        );
+      }
+      html {
+        font-family: sans-serif, system-ui;
+        background: #f8f8f8;
+        background-size: 224px;
+        display: flex;
+        justify-content: center;
+        color: #222;
+      }
+      body {
+        margin: 0;
+        width: 90%;
+        padding-top: 16px;
+        gap: 6.5vw;
+        display: flex;
+        flex-direction: column;
+      }
+      code {
+        font-family:
+          HK Grotesk,
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+    </style>
+  </body>
 </html>
