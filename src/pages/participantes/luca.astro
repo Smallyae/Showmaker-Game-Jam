@@ -1,18 +1,43 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import Fotter from "../../components/Fotter.astro";
-import Header from "../../components/Header.astro";
-import Twitter from "../../components/Redes/Twitter.astro";
+import Layout from "../../layouts/Participantes.astro";
+import Twitter from "../../components/Redes/x.astro";
+import Instagram from "../../components/Redes/Instagram.astro";
 ---
 
 <Layout title="Luca">
-  <Header />
-  <section class="Redes">
-    <Twitter twitter="https://twitter.com/SmallYae" />
-  </section>
-  <section class="Nombre"></section>
-  <section class="Apodo"></section>
-  <section class="Trabajos"></section>
-
-  <Fotter />
+  <main>
+    <section class="Redes">
+      <Twitter twitter="https://twitter.com/SmallYae" />
+      <Instagram instagram="https://www.instagram.com/__zyori/" />
+    </section>
+    <section class="Nombre">
+      <h1>Juanita Funque</h1>
+    </section>
+    <section class="Apodo"></section>
+    <section class="Trabajos"></section>
+  </main>
 </Layout>
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: calc(24px + 2vw);
+  }
+  .Redes {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .Nombre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  h1 {
+    font-size: calc(20px + 12vw);
+    margin: 0%;
+    font-weight: 700;
+    text-align: center;
+  }
+</style>

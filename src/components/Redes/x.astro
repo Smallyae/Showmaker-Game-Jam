@@ -6,8 +6,8 @@ interface Props {
 const { twitter } = Astro.props;
 ---
 
-<a href={twitter}>
-  <button>
+<button>
+  <a href={twitter} target="_blank">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="633"
@@ -19,8 +19,8 @@ const { twitter } = Astro.props;
         d="M1.93102 0.344971L245.939 326.868L0.390137 592.345H55.6534L270.631 359.916L444.327 592.345H632.39L374.653 247.456L603.208 0.344971H547.945L349.961 214.408L189.994 0.344971H1.93102ZM83.1997 41.0845H169.596L551.109 551.599H464.712L83.1997 41.0845Z"
         fill="black"></path>
     </svg>
-  </button>
-</a>
+  </a>
+</button>
 
 <style>
   button {
@@ -31,14 +31,21 @@ const { twitter } = Astro.props;
     align-items: center;
     width: 50px;
     height: 50px;
-    border: 1px solid #1da1f2;
+    border: 1px solid #222;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Agrega una transición suave al cambio de color */
   }
   button:hover {
-    background-color: #1da1f2; /* Cambia el color de fondo cuando el cursor pasa por encima */
+    background-color: #222;
+  }
+  button:hover svg path {
+    fill: white;
   }
   button svg {
+    width: 30px;
+    height: 30px;
+  }
+  a {
     width: 30px;
     height: 30px;
   }
