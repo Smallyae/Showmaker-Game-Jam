@@ -7,7 +7,7 @@ import Fotter from "../components/Fotter.astro";
 import Tema from "../components/Tema.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Showmaker">
   <Header />
   <main>
     <section class="titulo">
@@ -17,14 +17,14 @@ import Tema from "../components/Tema.astro";
     <Texto
       titulo="Introducción"
       parrafos={[
-        "Show Maker Jam 2024 es una Jam organizada por Jair Ochoa (Small Yae) para realizarse a lo largo de la primera mitad del año 2024.",
+        "Show Maker Game Jam 2024 es una Jam organizada por Jair Ochoa (Small Yae) y Daniel Rodriguez para realizarse a lo largo de la primera mitad del año 2024.",
       ]}
     />
     <Tema tema="Silencio" />
     <Texto
       titulo="Desarrollo"
       parrafos={[
-        "La jam tendrá una duración de x semanas (x - x) para que dé tiempo a participar con cierta tranquilidad.",
+        "La jam tendrá una duración de 2.5 semanas (23 de enero - 5 de febrero) para que dé tiempo a participar con cierta tranquilidad.",
         "Los juegos se deben entregar mediante una página de itcht.io.",
       ]}
     />
@@ -42,12 +42,12 @@ import Tema from "../components/Tema.astro";
       elementos={[
         "El juego debe haber sido desarrollado y presentado durante el plazo de la jam.",
         "El juego debe cumplir el tema de la jam.",
-        "El juego debe de ser jugable en Windows sin necesidad de emuladores.",
+        "El juego debe de ser jugable en moviles sin necesidad de emuladores.",
         "El juego debe ser totalmente gratuito.",
         "El juego no debe requerir hardware especial (ej: gafas de realidad virtual).",
         "El juego no debe requerir la instalación de algún programa externo o el registro en otra plataforma (ej: Core, Roblox).",
         "Puedes usar las herramientas que tú quieras para desarrollarlo, incluyendo cualquier motor.",
-        "No es obligatorio, pero se recomienda altamente incluir una versión descargable y que no requiere instalación.",
+        /* "No es obligatorio, pero se recomienda altamente incluir una versión descargable y que no requiere instalación.",*/
         "Puedes usar assets creados fuera de la jam siempre que sean gratuitos o tengas los derechos para usarlos.",
         "Al participar en la jam estás dando tu consentimiento explícito para que tu juego sea juzgado.",
         "Se valorará muy positivamente que el tema de la jam esté claramente presente y sea usado para crear mecánicas o experiencias novedosas.",
@@ -94,7 +94,7 @@ import Tema from "../components/Tema.astro";
   }
   main {
     padding: 0px 2%;
-    gap: 6.5vw;
+    gap: calc(28px + 6.5vw);
     display: flex;
     flex-direction: column;
   }
