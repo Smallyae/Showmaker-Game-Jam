@@ -1,4 +1,8 @@
-<button>
+---
+import Abrir from "../Botones/Abierto.astro";
+---
+
+<button onclick="document.querySelector('section').classList.toggle('show')">
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="18"
@@ -11,6 +15,11 @@
       fill="white"></path>
   </svg>
 </button>
+
+<section class="hide">
+  <Abrir />
+</section>
+
 <style>
   button {
     padding: 16px 13px;
@@ -27,5 +36,18 @@
     button {
       display: flex;
     }
+  }
+  section {
+    background-color: #222;
+    border-radius: 10%;
+    position: absolute;
+    top: 75px;
+    right: 5%;
+  }
+  section.hide {
+    display: none;
+  }
+  section.show {
+    display: flex;
   }
 </style>
