@@ -1,4 +1,5 @@
 ---
+import "@fontsource/hanken-grotesk";
 interface Props {
   title: string;
 }
@@ -12,7 +13,7 @@ import Navbar from "../components/Navbar.jsx";
 ---
 
 <!doctype html>
-<html lang="en">
+<html class="font-sans bg-gray-100 flex justify-center text-[#222]" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -22,9 +23,9 @@ import Navbar from "../components/Navbar.jsx";
     <title>{title}</title>
     <ViewTransitions />
   </head>
-  <body>
+  <body class="m-0 pt-4 flex flex-col">
     <Header />
-    <section>
+    <section class="flex items-start content-start flex-wrap gap-5">
       <slot />
     </section>
     <Footer />
@@ -40,40 +41,9 @@ import Navbar from "../components/Navbar.jsx";
           white 60%
         );
       }
-      html {
-        font-family: sans-serif, system-ui;
-        background: #f8f8f8;
-        background-size: 224px;
-        display: flex;
-        justify-content: center;
-        color: #222;
-      }
-      section {
-        display: flex;
-        align-items: flex-start;
-        align-content: flex-start;
-        flex-wrap: wrap;
-        gap: 20px;
-      }
       body {
-        margin: 0;
         width: 90%;
-        padding-top: 16px;
-        gap: 6.5vw;
-        display: flex;
-        flex-direction: column;
-      }
-      code {
-        font-family:
-          HK Grotesk,
-          Menlo,
-          Monaco,
-          Lucida Console,
-          Liberation Mono,
-          DejaVu Sans Mono,
-          Bitstream Vera Sans Mono,
-          Courier New,
-          monospace;
+        gap: calc(15px + 2vw);
       }
       h1 {
         color: #222;

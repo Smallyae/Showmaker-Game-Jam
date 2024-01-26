@@ -9,10 +9,10 @@ import Tema from "../components/Tema.astro";
 
 <Layout title="Showmaker">
   <Header />
-  <main>
-    <section class="titulo">
-      <h1>Showmaker</h1>
-      <h2>Game Jam</h2>
+  <main class="p-0 flex flex-col">
+    <section class="flex flex-col items-center">
+      <h1 class="m-0 font-bold">Showmaker</h1>
+      <h2 class="m-0">Game Jam</h2>
     </section>
     <Texto
       titulo="Introducción"
@@ -58,16 +58,11 @@ import Tema from "../components/Tema.astro";
 </Layout>
 
 <style>
-  .titulo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  main {
+    gap: calc(28px + 6.5vw);
   }
   h1 {
-    margin: 0px;
     font-size: 13vw;
-    font-style: normal;
-    font-weight: 700;
     background: linear-gradient(268deg, #69cdc5 -1.7%, #41929f 100.86%);
     background-size: 200% 200%;
     background-clip: text;
@@ -89,13 +84,5 @@ import Tema from "../components/Tema.astro";
   }
   h2 {
     font-size: 5vw;
-    margin: 0px;
-    font-style: normal;
-  }
-  main {
-    padding: 0px 2%;
-    gap: calc(28px + 6.5vw);
-    display: flex;
-    flex-direction: column;
   }
 </style>

@@ -4,17 +4,97 @@ import TarjetaParticipante from "../components/TarjetaParticipantes.astro";
 import Prueba from "../components/Botones/Abierto.astro";
 const participantes = [
   {
+    nombre: "Alejandra",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Anderson",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Ángela",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Daniel",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Daniel",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Daniel",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "David",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
     nombre: "Juan",
     imagen: "/ProfileImg.png",
     portada: "/Participante.png",
   },
   {
-    nombre: "Danna",
+    nombre: "Laura",
     imagen: "/ProfileImg.png",
     portada: "/Participante.png",
   },
   {
-    nombre: "Aleja",
+    nombre: "Luca",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Manuel",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "María",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Mariana",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Mariana",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Natalia",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Nicolás",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Nicolás",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Sebastián",
+    imagen: "/ProfileImg.png",
+    portada: "/Participante.png",
+  },
+  {
+    nombre: "Shalk-ti",
     imagen: "/ProfileImg.png",
     portada: "/Participante.png",
   },
@@ -24,12 +104,7 @@ const participantes = [
     portada: "/Participante.png",
   },
   {
-    nombre: "Zugi",
-    imagen: "/ProfileImg.png",
-    portada: "/Participante.png",
-  },
-  {
-    nombre: "Juanita",
+    nombre: "Victor",
     imagen: "/ProfileImg.png",
     portada: "/Participante.png",
   },
@@ -37,26 +112,23 @@ const participantes = [
 ---
 
 <Layout title="Participantes">
-  <h1>Participantes</h1>
+  <h1 class="font-bold">Participantes</h1>
   <div class="contenedor-tarjetas">
     {
-      (
-        <p>Se esta trabajando en los participantes</p>
-        /*participantes.map((participante) => (
+      participantes.map((participante) => (
         <TarjetaParticipante
           nombre={participante.nombre}
           imagen={participante.imagen}
           portada={participante.portada}
         />
-      ))*/
-      )
+      ))
     }
   </div>
 </Layout>
 
 <style>
   h1 {
-    padding: 0 0 6.5vw 0;
+    padding: 0 0 1rem 0;
   }
   .contenedor-tarjetas {
     display: grid;
