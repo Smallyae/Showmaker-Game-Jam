@@ -1,11 +1,12 @@
 ---
 interface Props {
   nombre: string;
+  apellido: string;
   imagen: string;
   portada: string;
 }
 
-const { nombre, imagen, portada } = Astro.props;
+const { nombre, apellido, imagen, portada } = Astro.props;
 ---
 
 <main class="flex flex-col items-start rounded-lg bg-white w-[300px]">
@@ -22,20 +23,9 @@ const { nombre, imagen, portada } = Astro.props;
         alt="Imagen del participante"
       />
     </divc>
-    <div class="w-9/12">
+    <div class="w-9/12 flex flex-col h-auto">
       <h1 class="m-0 p-0 font-bold text-2xl break-all">{nombre}</h1>
+      <h1 class="m-0 p-0 font-bold text-2xl break-all">{apellido}</h1>
     </div>
   </section>
 </main>
-
-<style>
-  /*
-  .imagen {
-    width: 25%;
-    height: auto;
-  }
-  .nombre {
-    width: 65%;
-    height: auto;
-  }*/
-</style>
